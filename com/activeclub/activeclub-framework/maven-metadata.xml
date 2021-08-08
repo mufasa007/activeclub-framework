@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.activeclub</groupId>
+  <artifactId>activeclub-framework</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20210808161827</lastUpdated>
+  </versioning>
+</metadata>
