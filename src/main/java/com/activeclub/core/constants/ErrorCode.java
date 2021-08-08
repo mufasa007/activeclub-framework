@@ -17,7 +17,9 @@ public enum ErrorCode {
     PARAM_ERROR("10000","PARAM_ERROR"),
 
     DB_ERROR("20000","success"),// 数据库
+
     SEVER_ERROR("30000","success"),// 服务
+
     FILE_ERROR("40000","FILE_ERROR")// 文件
     ;
 

@@ -11,7 +11,7 @@ import static com.activeclub.core.constants.NormalConstants.NULL_CANSTANTS2;
  * @Descrip
  * @Version 1.0
  */
-public class CheckUtil {
+public class NullUtil {
 
 
 
