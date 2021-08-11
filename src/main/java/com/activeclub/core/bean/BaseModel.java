@@ -26,6 +26,16 @@ public class BaseModel {
     private String code;
 
     /**
+     * 数据来源
+     */
+    private Short originType;
+
+    /**
+     * 信息级别
+     */
+    private Short infoLevel;
+
+    /**
      * 扩展字段群
      */
     private String ext1;
@@ -53,6 +63,62 @@ public class BaseModel {
      * 修改者
      */
     private String modifier;
+
+    public Short getOriginType() {
+        return originType;
+    }
+
+    public void setOriginType(Short originType) {
+        this.originType = originType;
+    }
+
+    public Short getInfoLevel() {
+        return infoLevel;
+    }
+
+    public void setInfoLevel(Short infoLevel) {
+        this.infoLevel = infoLevel;
+    }
+
+    public String getExt1() {
+        return ext1;
+    }
+
+    public void setExt1(String ext1) {
+        this.ext1 = ext1;
+    }
+
+    public String getExt2() {
+        return ext2;
+    }
+
+    public void setExt2(String ext2) {
+        this.ext2 = ext2;
+    }
+
+    public String getExt3() {
+        return ext3;
+    }
+
+    public void setExt3(String ext3) {
+        this.ext3 = ext3;
+    }
+
+    public String getExt4() {
+        return ext4;
+    }
+
+    public void setExt4(String ext4) {
+        this.ext4 = ext4;
+    }
+
+    public String getExt5() {
+        return ext5;
+    }
+
+    public void setExt5(String ext5) {
+        this.ext5 = ext5;
+    }
 
     public String getCreator() {
         return creator;
