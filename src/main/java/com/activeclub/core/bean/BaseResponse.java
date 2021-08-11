@@ -6,7 +6,7 @@ package com.activeclub.core.bean;
  * @Descrip
  * @Version 1.0
  */
-public class AcResponse {
+public class BaseResponse {
 
     private String code;
     private String msg;
