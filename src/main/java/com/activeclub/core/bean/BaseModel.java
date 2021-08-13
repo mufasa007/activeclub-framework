@@ -26,6 +26,11 @@ public class BaseModel {
     private String code;
 
     /**
+     * 名称
+     */
+    private String name;
+
+    /**
      * 数据来源
      */
     private Short originType;
@@ -36,13 +41,14 @@ public class BaseModel {
     private Short infoLevel;
 
     /**
-     * 扩展字段群
+     * 额外属性
      */
-    private String ext1;
-    private String ext2;
-    private String ext3;
-    private String ext4;
-    private String ext5;
+    private String attributeJson;
+
+    /**
+     * 描述
+     */
+    private String comment;
 
     /**
      * 创建时间
@@ -63,6 +69,40 @@ public class BaseModel {
      * 修改者
      */
     private String modifier;
+
+    /**
+     * 扩展字段群
+     */
+    private String ext1;
+    private String ext2;
+    private String ext3;
+    private String ext4;
+    private String ext5;
+
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAttributeJson() {
+        return attributeJson;
+    }
+
+    public void setAttributeJson(String attributeJson) {
+        this.attributeJson = attributeJson;
+    }
 
     public Short getOriginType() {
         return originType;
