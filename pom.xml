@@ -11,18 +11,10 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <github.global.server>github</github.global.server>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-        <!-- 发布到服务器插件的依赖包 -->
-        <dependency>
-            <groupId>com.github.github</groupId>
-            <artifactId>site-maven-plugin</artifactId>
-            <version>0.12</version>
-            <type>maven-plugin</type>
-        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
@@ -41,53 +33,30 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <!--编译本地仓库包插件，生成target/mvn-repo下面-->
-            <plugin>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.8.1</version>
-                <configuration>
-                    <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
-                </configuration>
-            </plugin>
-
-            <!--发布到服务器插件,需要依赖上面的部分-->
-            <!--查看aliyun的仓库https://maven.aliyun.com/mvn/search,发现需要依赖包-->
-            <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <version >0.9</version>
-                <configuration>
-                    <message >Maven artifacts for ${project.version}</message>
-                    <noJekyll>true</noJekyll>
-                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory><!--本地jar地址-->
-                    <branch>refs/heads/master</branch><!--branch必须是refs/heads/开头的，后边跟分支名称-->
-                    <merge>true</merge>
-                    <includes>
-                        <include>**/*</include>
-                    </includes>
-                    <repositoryName>activeclub-framework</repositoryName> <!--对应github上创建的仓库名-->
-                    <repositoryOwner>Mufasa007</repositoryOwner> <!--github仓库所有者setting中的name-->
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>site</goal>
-                        </goals>
-                        <phase>deploy</phase>
-                    </execution>
-                </executions>
-            </plugin>
-
-        </plugins>
+<!--        <plugins>-->
+<!--            &lt;!&ndash;编译本地仓库包插件，生成target/mvn-repo下面&ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <artifactId>maven-deploy-plugin</artifactId>-->
+<!--                <version>2.8.1</version>-->
+<!--                <configuration>-->
+<!--                    <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
 
 
     </build>
 
     <distributionManagement>
         <repository>
-            <id>ftp-repository</id>
-            <url>ftp://repository.mycompany.com/repository</url>
+            <id>releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://47.98.35.29:8081/nexus/repository/maven-releases/</url>
         </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://47.98.35.29:8081/nexus/repository/maven-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
 </project>
