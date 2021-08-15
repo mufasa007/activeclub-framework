@@ -10,7 +10,7 @@ public class BaseResponse {
 
     private String code;
     private String msg;
-    private Object[] data;
+    private Object data;
 
     public String getCode() {
         return code;
@@ -28,11 +28,11 @@ public class BaseResponse {
         this.msg = msg;
     }
 
-    public Object[] getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(Object[] data) {
+    public void setData(Object data) {
         this.data = data;
     }
 }

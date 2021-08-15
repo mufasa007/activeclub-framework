@@ -2,6 +2,7 @@ package com.activeclub.core.utils;
 
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -18,6 +19,7 @@ import java.util.Map;
  * @email
  * @descript 加解密工具
  */
+@Component
 public class EncrytUtil {
 
     @Value("${encry.salt:activeclub}")// ZJKTODO: 椒盐噪声待添加 2021/1/18 20:48
@@ -54,7 +56,7 @@ public class EncrytUtil {
     /**
      * 生成密钥对象(对称加密)
      */
-    private static SecretKey generateKey(byte[] key) throws Exception {
+    private SecretKey generateKey(byte[] key) throws Exception {
         // 根据指定的 RNG 算法, 创建安全随机数生成器
         SecureRandom random = SecureRandom.getInstance("SHA1PRNG");
         // 设置 密钥key的字节数组 作为安全随机数生成器的种子
