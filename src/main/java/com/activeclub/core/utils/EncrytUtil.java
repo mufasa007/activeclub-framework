@@ -19,7 +19,7 @@ import java.util.Map;
  * @email
  * @descript 加解密工具
  */
-@Component
+//@Bean
 public class EncrytUtil {
 
     @Value("${encry.salt:activeclub}")// ZJKTODO: 椒盐噪声待添加 2021/1/18 20:48
@@ -164,32 +164,32 @@ public class EncrytUtil {
         return new String(result);
     }
 
-    /**
-     * 样例
-     *
-     * @param args
-     * @throws Exception
-     */
-    public static void main(String[] args) throws Exception {
-        EncrytUtil encrytUtil = new EncrytUtil();
-        Map<String, String> map = encrytUtil.initKey();
-        String clear = "hello world! ";
-
-        String cipher1 = encrytUtil.Encode(clear, "0", "active");
-        String cipher2 = encrytUtil.Encode(clear, "1", map.get(PRIVATE_KEY));
-        String cipher3 = encrytUtil.Encode(clear, "2", map.get(PUBLIC_KEY));
-
-        String clear1 = encrytUtil.Decode(cipher1, "0", "active");
-        String clear2 = encrytUtil.Decode(cipher2, "1", map.get(PUBLIC_KEY));
-        String clear3 = encrytUtil.Decode(cipher3, "2", map.get(PRIVATE_KEY));
-
-        System.out.println(cipher1);
-        System.out.println(cipher2);
-        System.out.println(cipher3);
-
-        System.out.println(clear1);
-        System.out.println(clear2);
-        System.out.println(clear3);
-    }
+//    /**
+//     * 样例
+//     *
+//     * @param args
+//     * @throws Exception
+//     */
+//    public static void main(String[] args) throws Exception {
+//        EncrytUtil encrytUtil = new EncrytUtil();
+//        Map<String, String> map = encrytUtil.initKey();
+//        String clear = "hello world! ";
+//
+//        String cipher1 = encrytUtil.Encode(clear, "0", "active");
+//        String cipher2 = encrytUtil.Encode(clear, "1", map.get(PRIVATE_KEY));
+//        String cipher3 = encrytUtil.Encode(clear, "2", map.get(PUBLIC_KEY));
+//
+//        String clear1 = encrytUtil.Decode(cipher1, "0", "active");
+//        String clear2 = encrytUtil.Decode(cipher2, "1", map.get(PUBLIC_KEY));
+//        String clear3 = encrytUtil.Decode(cipher3, "2", map.get(PRIVATE_KEY));
+//
+//        System.out.println(cipher1);
+//        System.out.println(cipher2);
+//        System.out.println(cipher3);
+//
+//        System.out.println(clear1);
+//        System.out.println(clear2);
+//        System.out.println(clear3);
+//    }
 
 }
