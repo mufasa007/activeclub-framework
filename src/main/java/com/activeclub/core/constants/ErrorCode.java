@@ -19,6 +19,7 @@ public enum ErrorCode {
     PARAM_DECODE("10002","PARAM_DECODE_ERROR"),
 
     DB_ERROR("20000","success"),// 数据库
+    DB_UINDEX_ERROR("20001","duplicate key value violates unique constraint"),// 数据重复
 
     SEVER_ERROR("30000","success"),// 服务
 
