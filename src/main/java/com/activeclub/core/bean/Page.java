@@ -11,6 +11,24 @@ public class Page {
     private Object data;
     private Integer pageNum;
     private Integer pageSize;
+    private Integer totalNum;
+    private Integer totalSize;
+
+    public Integer getTotalNum() {
+        return totalNum;
+    }
+
+    public void setTotalNum(Integer totalNum) {
+        this.totalNum = totalNum;
+    }
+
+    public Integer getTotalSize() {
+        return totalSize;
+    }
+
+    public void setTotalSize(Integer totalSize) {
+        this.totalSize = totalSize;
+    }
 
     public Object getData() {
         return data;

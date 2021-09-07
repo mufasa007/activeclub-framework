@@ -6,7 +6,7 @@ package com.activeclub.core.bean;
  * @Descrip
  * @Version 1.0
  */
-public class BaseException extends Exception{
+public class BaseException extends RuntimeException{
 
     private String code;
 

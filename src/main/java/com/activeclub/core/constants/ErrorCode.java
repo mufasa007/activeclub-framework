@@ -11,19 +11,24 @@ package com.activeclub.core.constants;
  */
 public enum ErrorCode {
 
-    SUCCESS("0","success"),// 成功
-
+    // 成功
+    SUCCESS("0","success"),
+    // 未知异常
+    UNKOWN_ERROR("1","UNKOWN_ERROR"),
 
     PARAM_ERROR("10000","PARAM_ERROR"),
     PARAM_NULL("10001","PARAM_IS_NULL"),
     PARAM_DECODE("10002","PARAM_DECODE_ERROR"),
 
-    DB_ERROR("20000","success"),// 数据库
-    DB_UINDEX_ERROR("20001","duplicate key value violates unique constraint"),// 数据重复
+    // 数据库
+    DB_ERROR("20000","success"),
+    // 数据重复
+    DB_UINDEX_ERROR("20001","duplicate key value violates unique constraint"),
 
-    SEVER_ERROR("30000","success"),// 服务
-
-    FILE_ERROR("40000","FILE_ERROR")// 文件
+    // 服务
+    SEVER_ERROR("30000","success"),
+    // 文件
+    FILE_ERROR("40000","FILE_ERROR")
     ;
 
     public String code;

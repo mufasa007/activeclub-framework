@@ -26,4 +26,5 @@ public class RabbitMqServiceImpl implements MqService {
     public Object listeningMq() {
         return null;
     }
+
 }

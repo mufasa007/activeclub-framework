@@ -24,6 +24,7 @@ public class BaseModel {
      * 唯一键:部门code等
      */
     private String code;
+    private String tenantCode;
 
     /**
      * 名称
@@ -79,6 +80,13 @@ public class BaseModel {
     private String ext4;
     private String ext5;
 
+    public String getTenantCode() {
+        return tenantCode;
+    }
+
+    public void setTenantCode(String tenantCode) {
+        this.tenantCode = tenantCode;
+    }
 
     public String getComment() {
         return comment;
