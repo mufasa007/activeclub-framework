@@ -12,6 +12,13 @@ import java.util.Date;
  */
 public class NormalConstants {
 
+    /**
+     * 数据来源
+     */
+    public static Short ORIGIN_TYPE_OURSELF = 0;
+    public static Short ORIGIN_TYPE_BYTEDANCE = 1;
+
+
     public static String NULL_CANSTANTS1 = "";
     public static String NULL_CANSTANTS2 = "null";
 
