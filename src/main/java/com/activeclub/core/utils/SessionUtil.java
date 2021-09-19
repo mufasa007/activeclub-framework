@@ -6,5 +6,18 @@ package com.activeclub.core.utils;
  * @Descrip
  * @Version 1.0
  */
-public class SessionUtil {
+public interface SessionUtil {
+
+    /**
+     * 获取默认账户code
+     * @return
+     */
+    String getUserCode();
+
+    /**
+     * 获取租户code
+     * @return
+     */
+    String getTenantCode();
+
 }
