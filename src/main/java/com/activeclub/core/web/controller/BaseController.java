@@ -1,5 +1,6 @@
 package com.activeclub.core.web.controller;
 
+import com.activeclub.core.bean.BaseException;
 import com.activeclub.core.bean.BaseResponse;
 import com.activeclub.core.constants.ErrorCode;
 import com.activeclub.core.utils.NullUtil;
@@ -57,6 +58,13 @@ public class BaseController {
         BaseResponse baseResponse =  new BaseResponse();
         baseResponse.setCode(errorCode.code);
         baseResponse.setMsg(errorCode.msg);
+        return baseResponse;
+    }
+
+    public BaseResponse error(BaseException baseException){
+        BaseResponse baseResponse =  new BaseResponse();
+        baseResponse.setCode(baseException.getCode());
+        baseResponse.setMsg(baseException.getMessage());
         return baseResponse;
     }
 

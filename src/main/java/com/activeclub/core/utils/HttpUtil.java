@@ -44,6 +44,19 @@ public class HttpUtil {
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
     /**
+     * 直接请求简化
+     * @param url
+     * @param params
+     * @return
+     */
+    public String doGet(String url,Map<String,String > params){
+        RequestDto requestDto = new RequestDto();
+        requestDto.setUrl(url);
+        requestDto.setParams(params);
+        return doGet( requestDto,  null);
+    }
+
+    /**
      * get请求
      *
      * @param requestDto      输入参数
@@ -147,6 +160,19 @@ public class HttpUtil {
             }
         }
         return resultString;
+    }
+
+    /**
+     * 直接请求
+     * @param url
+     * @param jsonString
+     * @return
+     */
+    public String doPostJson(String url,String jsonString){
+        RequestDto requestDto = new RequestDto();
+        requestDto.setUrl(url);
+        requestDto.setJsonStr(jsonString);
+        return doPost( requestDto, null,null);
     }
 
     /**
