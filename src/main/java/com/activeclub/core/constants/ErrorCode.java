@@ -27,8 +27,10 @@ public enum ErrorCode {
 
     // 服务
     SEVER_ERROR("30000","success"),
+
     // 文件
     FILE_ERROR("40000","FILE_ERROR"),
+
     // 网络请求异常
     NETWORK_ERROR("50000","NETWORK_ERROR"),
     REQUEST_ERROR("50001","REQUEST_ERROR"),

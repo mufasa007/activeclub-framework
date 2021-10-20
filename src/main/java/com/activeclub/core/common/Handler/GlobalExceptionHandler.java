@@ -31,7 +31,7 @@ public class GlobalExceptionHandler {
             baseResponse.setMsg(be.getMessage());
         }else {
             baseResponse.setCode(ErrorCode.UNKOWN_ERROR.code);
-            baseResponse.setMsg(ErrorCode.UNKOWN_ERROR.msg);
+            baseResponse.setMsg(e.getMessage());
         }
 
         return baseResponse;
