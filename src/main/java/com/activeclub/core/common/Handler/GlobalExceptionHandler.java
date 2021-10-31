@@ -30,6 +30,7 @@ public class GlobalExceptionHandler {
             baseResponse.setCode(be.getCode());
             baseResponse.setMsg(be.getMessage());
         }else {
+            e.printStackTrace();
             baseResponse.setCode(ErrorCode.UNKOWN_ERROR.code);
             baseResponse.setMsg(e.getMessage());
         }
