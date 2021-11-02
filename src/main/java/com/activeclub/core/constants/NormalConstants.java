@@ -22,6 +22,9 @@ public class NormalConstants {
     public static String NULL_CANSTANTS1 = "";
     public static String NULL_CANSTANTS2 = "null";
 
+    public static String ADMIN = "admin";
+    public static String DEFAULT_TENANT_CODE = "0";
+
     /**
      * 时间设置
      */
