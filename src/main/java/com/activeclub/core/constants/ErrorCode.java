@@ -19,6 +19,7 @@ public enum ErrorCode {
     PARAM_ERROR("10000","PARAM_ERROR"),
     PARAM_NULL("10001","PARAM_IS_NULL"),
     PARAM_DECODE("10002","PARAM_DECODE_ERROR"),
+    PARAM_NOT_FOUND("10003","PARAM_NOT_FOUND"),
 
     // 数据库
     DB_ERROR("20000","success"),

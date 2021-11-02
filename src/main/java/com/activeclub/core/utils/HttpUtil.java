@@ -221,7 +221,7 @@ public class HttpUtil {
             }
 
             // 设置jsonBody
-            if (!StringUtils.hasText(jsonStr)) {
+            if (StringUtils.hasText(jsonStr)) {
                 StringEntity entity = new StringEntity(jsonStr, ContentType.APPLICATION_JSON);
                 httpPost.setEntity(entity);
             }
