@@ -14,6 +14,16 @@ public class Configs {
   @Value("${debug.enable:false}")
   private boolean debugEnable;
 
+  @Value("${mq.enable:false}")
+  private boolean mqEnable;
+
+  public boolean isMqEnable() {
+    return mqEnable;
+  }
+
+  public void setMqEnable(boolean mqEnable) {
+    this.mqEnable = mqEnable;
+  }
 
   public boolean isDebugEnable() {
     return debugEnable;
